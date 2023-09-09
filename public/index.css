@@ -59,6 +59,7 @@ img{
     background-color: skyblue;
     cursor: pointer;
     display: none;
+    margin-bottom: 20px;
 }
 a{
 

@@ -16,7 +16,9 @@ let searchimg = async () => {
   );
   let data = await response.json();
   result = data.results;
-
+  if (data.total_pages > 1) {
+    showMoreBtn.style.display = "block";
+  }
   //   console.log(result);
 
   for (let item in result) {
@@ -37,7 +39,7 @@ let searchimg = async () => {
 
   console.log(data);
 };
-showMoreBtn.onclick = async () => {
+showMoreBtn.onclick = () => {
   searchimg();
 };
 form.addEventListener("submit", (event) => {
